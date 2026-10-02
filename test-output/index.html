@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-skipped">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Sahar Dwaikat\AppData\Local\Temp\testng-eclipse-383701678\testng-customsuite.xml</span>
+                    <span>C:\Users\Sahar Dwaikat\AppData\Local\Temp\testng-eclipse-1182608372\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">11 methods, 1 failed,   10 passed</span>
+                    <span class="method-stats">8 methods,  3 skipped,  5 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content skipped suite-Default_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestPages.WorkFlow1Test" class="method navigator-link" hash-for-method="verifyCartPrice">verifyCartPrice</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestPages.LoginTest" class="method navigator-link" hash-for-method="verifyLogin(Admin, %&amp;*#@, false)">verifyLogin(Admin, %&*#@, false)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestPages.LoginTest" class="method navigator-link" hash-for-method="verifyLogin(, , empty)">verifyLogin(, , empty)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestPages.LoginTest" class="method navigator-link" hash-for-method="verifyLogin(admin, -123, false)">verifyLogin(admin, -123, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,52 +127,27 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestPages.WorkFlow1Test" class="method navigator-link" hash-for-method="verifyAddCart">verifyAddCart</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="TestPages.LoginTest" class="method navigator-link" hash-for-method="verifyLogin(admin, 123, false)">verifyLogin(admin, 123, false)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestPages.WorkFlow1Test" class="method navigator-link" hash-for-method="verifyLoginClick">verifyLoginClick</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="TestPages.LoginTest" class="method navigator-link" hash-for-method="verifyLogin(admin, , empty)">verifyLogin(admin, , empty)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestPages.WorkFlow1Test" class="method navigator-link" hash-for-method="verifyPlaceOrder(, palestine, nnnn, 00000000000000000, Oct, 26, Please fill out Name and Creditcard., false)">verifyPlaceOrder(, palestine, nnnn, 00000000000000000, Oct, 26, Please fill out Name and Creditcard., false)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="TestPages.LoginTest" class="method navigator-link" hash-for-method="verifyLogin(sahar, 1234, true)">verifyLogin(sahar, 1234, true)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestPages.WorkFlow1Test" class="method navigator-link" hash-for-method="verifyPlaceOrder(2333, , , -2333, , , Thank you for your purchase!, true)">verifyPlaceOrder(2333, , , -2333, , , Thank you for your purchase!, true)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="TestPages.LoginTest" class="method navigator-link" hash-for-method="verifyLogin(admin1, pass123, false)">verifyLogin(admin1, pass123, false)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestPages.WorkFlow1Test" class="method navigator-link" hash-for-method="verifyPlaceOrder(, , , , , , Please fill out Name and Creditcard., false)">verifyPlaceOrder(, , , , , , Please fill out Name and Creditcard., false)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestPages.WorkFlow1Test" class="method navigator-link" hash-for-method="verifyPlaceOrder(sahar, Palestine, Nablus, 9999, Sept, 2026, Thank you for your purchase!, true)">verifyPlaceOrder(sahar, Palestine, Nablus, 9999, Sept, 2026, Thank you for your purchase!, true)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestPages.WorkFlow1Test" class="method navigator-link" hash-for-method="verifyPlaceOrder(ffff, palestine, nnnn, , Oct, 26, Please fill out Name and Creditcard., false)">verifyPlaceOrder(ffff, palestine, nnnn, , Oct, 26, Please fill out Name and Creditcard., false)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestPages.WorkFlow1Test" class="method navigator-link" hash-for-method="verifyPlaceOrder(2333, , , 9999, , , Thank you for your purchase!, true)">verifyPlaceOrder(2333, , , 9999, , , Thank you for your purchase!, true)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestPages.WorkFlow1Test" class="method navigator-link" hash-for-method="verifyselectItem1">verifyselectItem1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestPages.WorkFlow1Test" class="method navigator-link" hash-for-method="verifyselectItem2">verifyselectItem2</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="TestPages.LoginTest" class="method navigator-link" hash-for-method="verifyLogin(, pass123, empty)">verifyLogin(, pass123, empty)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -177,46 +162,136 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">TestPages.WorkFlow1Test</span>
+              <img src="skipped.png"/>
+              <span class="class-name">TestPages.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyCartPrice">
-                  </a> <!-- verifyCartPrice -->
-                  <span class="method-name">verifyCartPrice</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//tbody[@id=&apos;tbodyid&apos;]/tr/td[3])[2]&quot;}
-  (Session info: MicrosoftEdge=154.0.4258.48)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+                  <a name="verifyLogin(Admin, %&amp;*#@, false)">
+                  </a> <!-- verifyLogin(Admin, %&*#@, false) -->
+                  <span class="method-name">verifyLogin</span>
+                  <span class="parameters">(Admin,%&*#@,false)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class=&apos;nav-link&apos; and text()=&apos;Log in&apos;] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12&apos;
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [5b3898834dc38da7650fa7c1ee1e0be5, findElement {using=xpath, value=(//tbody[@id=&apos;tbodyid&apos;]/tr/td[3])[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 154.0.4258.48, fedcm:accounts: true, goog:processID: 41732, ms:edgeOptions: {debuggerAddress: localhost:49435}, msedge: {msedgedriverVersion: 154.0.4258.37 (f6ddc7bb8d2a..., userDataDir: C:\Users\SAHARD~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49435/devtoo..., se:cdpVersion: 154.0.4258.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5b3898834dc38da7650fa7c1ee1e0be5
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at Pages.WorkFlow1Page.totalPrice(WorkFlow1Page.java:131)
-	at TestPages.WorkFlow1Test.verifyCartPrice(WorkFlow1Test.java:72)
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 154.0.4258.48, fedcm:accounts: true, goog:processID: 40232, ms:edgeOptions: {debuggerAddress: localhost:61732}, msedge: {msedgedriverVersion: 154.0.4258.48 (80bb122d4912..., userDataDir: C:\Users\SAHARD~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61732/devtoo..., se:cdpVersion: 154.0.4258.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5bdad08f854b701a1120f4ea4d2723fb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Pages.LoginPage.clickLoginmain(LoginPage.java:62)
+	at TestPages.LoginTest.setupObject(LoginTest.java:29)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogin(, , empty)">
+                  </a> <!-- verifyLogin(, , empty) -->
+                  <span class="method-name">verifyLogin</span>
+                  <span class="parameters">(,,empty)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class=&apos;nav-link&apos; and text()=&apos;Log in&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 154.0.4258.48, fedcm:accounts: true, goog:processID: 40232, ms:edgeOptions: {debuggerAddress: localhost:61732}, msedge: {msedgedriverVersion: 154.0.4258.48 (80bb122d4912..., userDataDir: C:\Users\SAHARD~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61732/devtoo..., se:cdpVersion: 154.0.4258.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5bdad08f854b701a1120f4ea4d2723fb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Pages.LoginPage.clickLoginmain(LoginPage.java:62)
+	at TestPages.LoginTest.setupObject(LoginTest.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogin(admin, -123, false)">
+                  </a> <!-- verifyLogin(admin, -123, false) -->
+                  <span class="method-name">verifyLogin</span>
+                  <span class="parameters">(admin,-123,false)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class=&apos;nav-link&apos; and text()=&apos;Log in&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 154.0.4258.48, fedcm:accounts: true, goog:processID: 40232, ms:edgeOptions: {debuggerAddress: localhost:61732}, msedge: {msedgedriverVersion: 154.0.4258.48 (80bb122d4912..., userDataDir: C:\Users\SAHARD~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61732/devtoo..., se:cdpVersion: 154.0.4258.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5bdad08f854b701a1120f4ea4d2723fb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Pages.LoginPage.clickLoginmain(LoginPage.java:62)
+	at TestPages.LoginTest.setupObject(LoginTest.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
@@ -244,87 +319,51 @@ Session ID: 5b3898834dc38da7650fa7c1ee1e0be5
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-skipped -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">TestPages.WorkFlow1Test</span>
+              <span class="class-name">TestPages.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyAddCart">
-                  </a> <!-- verifyAddCart -->
-                  <span class="method-name">verifyAddCart</span>
+                  <a name="verifyLogin(admin, 123, false)">
+                  </a> <!-- verifyLogin(admin, 123, false) -->
+                  <span class="method-name">verifyLogin</span>
+                  <span class="parameters">(admin,123,false)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyLoginClick">
-                  </a> <!-- verifyLoginClick -->
-                  <span class="method-name">verifyLoginClick</span>
+                  <a name="verifyLogin(admin, , empty)">
+                  </a> <!-- verifyLogin(admin, , empty) -->
+                  <span class="method-name">verifyLogin</span>
+                  <span class="parameters">(admin,,empty)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyPlaceOrder(, palestine, nnnn, 00000000000000000, Oct, 26, Please fill out Name and Creditcard., false)">
-                  </a> <!-- verifyPlaceOrder(, palestine, nnnn, 00000000000000000, Oct, 26, Please fill out Name and Creditcard., false) -->
-                  <span class="method-name">verifyPlaceOrder</span>
-                  <span class="parameters">(,palestine,nnnn,00000000000000000,Oct,26,Please fill out Name and Creditcard.,false)</span>
+                  <a name="verifyLogin(sahar, 1234, true)">
+                  </a> <!-- verifyLogin(sahar, 1234, true) -->
+                  <span class="method-name">verifyLogin</span>
+                  <span class="parameters">(sahar,1234,true)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyPlaceOrder(2333, , , -2333, , , Thank you for your purchase!, true)">
-                  </a> <!-- verifyPlaceOrder(2333, , , -2333, , , Thank you for your purchase!, true) -->
-                  <span class="method-name">verifyPlaceOrder</span>
-                  <span class="parameters">(2333,,,-2333,,,Thank you for your purchase!,true)</span>
+                  <a name="verifyLogin(admin1, pass123, false)">
+                  </a> <!-- verifyLogin(admin1, pass123, false) -->
+                  <span class="method-name">verifyLogin</span>
+                  <span class="parameters">(admin1,pass123,false)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyPlaceOrder(, , , , , , Please fill out Name and Creditcard., false)">
-                  </a> <!-- verifyPlaceOrder(, , , , , , Please fill out Name and Creditcard., false) -->
-                  <span class="method-name">verifyPlaceOrder</span>
-                  <span class="parameters">(,,,,,,Please fill out Name and Creditcard.,false)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyPlaceOrder(sahar, Palestine, Nablus, 9999, Sept, 2026, Thank you for your purchase!, true)">
-                  </a> <!-- verifyPlaceOrder(sahar, Palestine, Nablus, 9999, Sept, 2026, Thank you for your purchase!, true) -->
-                  <span class="method-name">verifyPlaceOrder</span>
-                  <span class="parameters">(sahar,Palestine,Nablus,9999,Sept,2026,Thank you for your purchase!,true)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyPlaceOrder(ffff, palestine, nnnn, , Oct, 26, Please fill out Name and Creditcard., false)">
-                  </a> <!-- verifyPlaceOrder(ffff, palestine, nnnn, , Oct, 26, Please fill out Name and Creditcard., false) -->
-                  <span class="method-name">verifyPlaceOrder</span>
-                  <span class="parameters">(ffff,palestine,nnnn,,Oct,26,Please fill out Name and Creditcard.,false)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyPlaceOrder(2333, , , 9999, , , Thank you for your purchase!, true)">
-                  </a> <!-- verifyPlaceOrder(2333, , , 9999, , , Thank you for your purchase!, true) -->
-                  <span class="method-name">verifyPlaceOrder</span>
-                  <span class="parameters">(2333,,,9999,,,Thank you for your purchase!,true)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyselectItem1">
-                  </a> <!-- verifyselectItem1 -->
-                  <span class="method-name">verifyselectItem1</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyselectItem2">
-                  </a> <!-- verifyselectItem2 -->
-                  <span class="method-name">verifyselectItem2</span>
+                  <a name="verifyLogin(, pass123, empty)">
+                  </a> <!-- verifyLogin(, pass123, empty) -->
+                  <span class="method-name">verifyLogin</span>
+                  <span class="parameters">(,pass123,empty)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -332,7 +371,7 @@ Session ID: 5b3898834dc38da7650fa7c1ee1e0be5
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Sahar Dwaikat\AppData\Local\Temp\testng-eclipse-383701678\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Sahar Dwaikat\AppData\Local\Temp\testng-eclipse-1182608372\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -341,7 +380,7 @@ Session ID: 5b3898834dc38da7650fa7c1ee1e0be5
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestPages.WorkFlow1Test&quot;/&gt;
+      &lt;class name=&quot;TestPages.LoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -381,56 +420,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(11);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyLoginClick')
-data.setCell(0, 2, 'TestPages.WorkFlow1Test')
-data.setCell(0, 3, 2726);
+data.setCell(0, 1, 'verifyLogin')
+data.setCell(0, 2, 'TestPages.LoginTest')
+data.setCell(0, 3, 2473);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyAddCart')
-data.setCell(1, 2, 'TestPages.WorkFlow1Test')
-data.setCell(1, 3, 2648);
+data.setCell(1, 1, 'verifyLogin')
+data.setCell(1, 2, 'TestPages.LoginTest')
+data.setCell(1, 3, 1510);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyselectItem1')
-data.setCell(2, 2, 'TestPages.WorkFlow1Test')
-data.setCell(2, 3, 1986);
+data.setCell(2, 1, 'verifyLogin')
+data.setCell(2, 2, 'TestPages.LoginTest')
+data.setCell(2, 3, 1472);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyCartPrice')
-data.setCell(3, 2, 'TestPages.WorkFlow1Test')
-data.setCell(3, 3, 1946);
+data.setCell(3, 1, 'verifyLogin')
+data.setCell(3, 2, 'TestPages.LoginTest')
+data.setCell(3, 3, 1047);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyPlaceOrder')
-data.setCell(4, 2, 'TestPages.WorkFlow1Test')
-data.setCell(4, 3, 1931);
+data.setCell(4, 1, 'verifyLogin')
+data.setCell(4, 2, 'TestPages.LoginTest')
+data.setCell(4, 3, 999);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyPlaceOrder')
-data.setCell(5, 2, 'TestPages.WorkFlow1Test')
-data.setCell(5, 3, 1761);
+data.setCell(5, 1, 'verifyLogin')
+data.setCell(5, 2, 'TestPages.LoginTest')
+data.setCell(5, 3, 1);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyPlaceOrder')
-data.setCell(6, 2, 'TestPages.WorkFlow1Test')
-data.setCell(6, 3, 1745);
+data.setCell(6, 1, 'verifyLogin')
+data.setCell(6, 2, 'TestPages.LoginTest')
+data.setCell(6, 3, 0);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyPlaceOrder')
-data.setCell(7, 2, 'TestPages.WorkFlow1Test')
-data.setCell(7, 3, 1732);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyPlaceOrder')
-data.setCell(8, 2, 'TestPages.WorkFlow1Test')
-data.setCell(8, 3, 1667);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyselectItem2')
-data.setCell(9, 2, 'TestPages.WorkFlow1Test')
-data.setCell(9, 3, 1628);
-data.setCell(10, 0, 10)
-data.setCell(10, 1, 'verifyPlaceOrder')
-data.setCell(10, 2, 'TestPages.WorkFlow1Test')
-data.setCell(10, 3, 1561);
+data.setCell(7, 1, 'verifyLogin')
+data.setCell(7, 2, 'TestPages.LoginTest')
+data.setCell(7, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -456,144 +483,108 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestPages.WorkFlow1Test</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestPages.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setupDriver</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">goHome</span>
-                <span class="method-start">10738 ms</span>
+                <span class="method-start">10489 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">setUpObject</span>
-                <span class="method-start">11139 ms</span>
+                <span class="method-name">setupObject</span>
+                <span class="method-start">10734 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyLoginClick</span>
-                <span class="method-start">11150 ms</span>
+                <span class="method-name">verifyLogin(sahar, 1234, true)</span>
+                <span class="method-start">11163 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">goHome</span>
-                <span class="method-start">13883 ms</span>
+                <span class="method-start">13642 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">setUpObject</span>
-                <span class="method-start">13994 ms</span>
+                <span class="method-name">setupObject</span>
+                <span class="method-start">13809 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyselectItem1</span>
-                <span class="method-start">13995 ms</span>
+                <span class="method-name">verifyLogin(admin1, pass123, false)</span>
+                <span class="method-start">13977 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">goHome</span>
-                <span class="method-start">15985 ms</span>
+                <span class="method-start">15495 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">setUpObject</span>
-                <span class="method-start">16156 ms</span>
+                <span class="method-name">setupObject</span>
+                <span class="method-start">15675 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyselectItem2</span>
-                <span class="method-start">16157 ms</span>
+                <span class="method-name">verifyLogin(admin, 123, false)</span>
+                <span class="method-start">15810 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">goHome</span>
-                <span class="method-start">17790 ms</span>
+                <span class="method-start">17293 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">setUpObject</span>
-                <span class="method-start">17944 ms</span>
+                <span class="method-name">setupObject</span>
+                <span class="method-start">17687 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyAddCart</span>
-                <span class="method-start">17947 ms</span>
+                <span class="method-name">verifyLogin(, pass123, empty)</span>
+                <span class="method-start">17830 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">goHome</span>
-                <span class="method-start">20599 ms</span>
+                <span class="method-start">18841 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">setUpObject</span>
-                <span class="method-start">20983 ms</span>
+                <span class="method-name">setupObject</span>
+                <span class="method-start">19258 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <span class="method-name">verifyLogin(admin, , empty)</span>
+                <span class="method-start">19410 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">goHome</span>
+                <span class="method-start">20462 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyCartPrice</span>
-                <span class="method-start">20984 ms</span>
+                <span class="method-name">setupObject</span>
+                <span class="method-start">22525 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogin(, , empty)</span>
+                <span class="method-start">42952 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">goHome</span>
-                <span class="method-start">22965 ms</span>
+                <span class="method-start">42968 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">setUpObject</span>
-                <span class="method-start">23423 ms</span>
+                <span class="method-name">setupObject</span>
+                <span class="method-start">42970 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyPlaceOrder(sahar, Palestine, Nablus, 9999, Sept, 2026, Thank you for your purchase!, true)</span>
-                <span class="method-start">23424 ms</span>
+                <span class="method-name">verifyLogin(admin, -123, false)</span>
+                <span class="method-start">42975 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">goHome</span>
-                <span class="method-start">25173 ms</span>
+                <span class="method-start">42989 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">setUpObject</span>
-                <span class="method-start">25363 ms</span>
+                <span class="method-name">setupObject</span>
+                <span class="method-start">42993 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyPlaceOrder(, , , , , , Please fill out Name and Creditcard., false)</span>
-                <span class="method-start">25364 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">goHome</span>
-                <span class="method-start">26938 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">setUpObject</span>
-                <span class="method-start">27135 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyPlaceOrder(, palestine, nnnn, 00000000000000000, Oct, 26, Please fill out Name and Creditcard., false)</span>
-                <span class="method-start">27136 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">goHome</span>
-                <span class="method-start">28878 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">setUpObject</span>
-                <span class="method-start">29072 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyPlaceOrder(ffff, palestine, nnnn, , Oct, 26, Please fill out Name and Creditcard., false)</span>
-                <span class="method-start">29073 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">goHome</span>
-                <span class="method-start">30753 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">setUpObject</span>
-                <span class="method-start">31105 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyPlaceOrder(2333, , , 9999, , , Thank you for your purchase!, true)</span>
-                <span class="method-start">31107 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">goHome</span>
-                <span class="method-start">32871 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">setUpObject</span>
-                <span class="method-start">33175 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyPlaceOrder(2333, , , -2333, , , Thank you for your purchase!, true)</span>
-                <span class="method-start">33177 ms</span>
+                <span class="method-name">verifyLogin(Admin, %&*#@, false)</span>
+                <span class="method-start">42995 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

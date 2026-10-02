@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
 <suite name="DemoBlaze_Suite" verbose="1" parallel="none">
     <test name="WorkFlow1Run">
         <classes>
-            <class name="TestPages.WorkFlow1Test"/>
-        </classes>
+        
+          <!--  Class 1  -->
+                 <class name="TestPages.LoginTest"/>
+                   
+          
+         <!--  Class 2  -->
+            <class name="TestPages.FirstWorkFlowTest"/>
+            <methods>
+                   <include name=" verifyLoginClick"/>
+                   <include name="verifyselectItem1"/>
+                   <include name="verifyselectItem2"/>
+                   <include name="verifyAddCart"/>
+                   <include name="verifyCartPrice"/>
+                   <include name="verifyPlaceOrder"/>
+
+           </methods>
+           </class>
+           
+           <!--  Class 3  -->
+            <class name="TestPages.SecondWorkFlow"/>
+            <methods>
+                   <include name="verifySignUp"/>
+                   <include name="verifyLoginClick"/>
+                   <include name="veryfiyLaptopCategoriesClick"/>
+                   <include name="verifyLaptopCategoriesNext"/>
+                   <include name="verifyContactNavigation"/>
+                   <include name="verifyContactTemplat"/>
+                    <include name="verifyEmptyCart"/>
+                   
+
+           </methods>
+           </class>
+
+         </classes>
     </test>
 </suite>

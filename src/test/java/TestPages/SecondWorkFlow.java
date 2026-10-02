@@ -9,23 +9,32 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import Base.BasePage;
-import Pages.WorkFlow1Page;
-import Pages.WorkFlow2;
+import Pages.CartPage;
+import Pages.FirstWorkFlowPage;
+import Pages.ItemsPage;
+import Pages.SignUpPage;
+import Pages.SecondWorkFlowPage;
 
 
-public class WorkFlow2Test extends BasePage {
+public class SecondWorkFlow extends BasePage {
 	
 	
-	WorkFlow2 WorkFlow2Obj;
+	SecondWorkFlowPage WorkFlow2Obj;
+	ItemsPage         ItempageObj;
+	CartPage          CartPageObj;
+	SignUpPage       SignUpObj;
 	WebDriverWait wait;
 
-	WorkFlow1Page WorkFlow1;
+	FirstWorkFlowPage WorkFlow1;
 	
 
 @BeforeMethod
 void setUpObject() {
-	WorkFlow2Obj= new WorkFlow2(driver);
-	WorkFlow1= new WorkFlow1Page(driver);
+	WorkFlow2Obj= new SecondWorkFlowPage(driver);
+	WorkFlow1= new FirstWorkFlowPage(driver);
+	ItempageObj = new ItemsPage (driver);
+	CartPageObj = new CartPage (driver);
+	SignUpObj  = new SignUpPage(driver);
     wait=new WebDriverWait(driver,Duration.ofSeconds(20));
     
 
@@ -34,9 +43,9 @@ void setUpObject() {
 
 @Test (priority=1, dataProvider = "SignUpUsers",dataProviderClass = TestingData.class )
 void  verifySignUp(String username,String Pass,String expected){
-	 WorkFlow2Obj.signupClick();
-	WorkFlow2Obj.userSignUp(username ,Pass);
-	WorkFlow2Obj.signUP();
+	SignUpObj .signupClick();
+	SignUpObj .userSignUp(username ,Pass);
+	SignUpObj .signUP();
 	Alert alert=wait.until(ExpectedConditions.alertIsPresent());
 	
 	String actual =alert.getText();
@@ -57,14 +66,14 @@ void verifyLoginClick() {
     Assert.assertTrue(WorkFlow1.logintext().contains("Log in"));
 	WorkFlow1.userLogin("sahar","1234");
 	    	  	
-	Assert.assertTrue(WorkFlow1.welcomeUser().contains("Welcome sahar"));
+	Assert.assertTrue(ItempageObj.welcomeUser().contains("Welcome sahar"));
 	
 }
 @Test(priority=3)
 void veryfiyLaptopCategoriesClick() {
 
-	WorkFlow2Obj.laptopCategoriesClick();
-	Assert.assertTrue(WorkFlow2Obj.laptopIsDisplayed());
+	ItempageObj.laptopCategoriesClick();
+	Assert.assertTrue(ItempageObj.laptopIsDisplayed());
 	WorkFlow2Obj.nextClick();
 	WorkFlow2Obj.previousClick();
 	
@@ -72,11 +81,11 @@ void veryfiyLaptopCategoriesClick() {
 @Test(priority=4)
 void verifyLaptopCategoriesNext()
 {
-	WorkFlow2Obj.laptopCategoriesClick();
+	ItempageObj.laptopCategoriesClick();
     WorkFlow2Obj.nextClick();
-    WorkFlow2Obj.asusIsDisplayed();
+    ItempageObj.asusIsDisplayed();
 
-	Assert.assertTrue(WorkFlow2Obj.asusIsDisplayed());
+	Assert.assertTrue(ItempageObj.asusIsDisplayed());
 	System.out.println("Laptop products are displayed and products from other categories are  displayed(ASUS).");}
 
 @Test(priority=5)
@@ -110,10 +119,10 @@ void verifyContactTemplat(String email, String name ,String message, String expe
 	@Test(priority=7)
 	void verifyEmptyCart () {
 		
-		WorkFlow1.cartClick();
+		CartPageObj.cartClick();
 		Assert.assertEquals(WorkFlow2Obj.emptyCart(), 0);
 		System.out.println("the cart is Empty , no item selected");
-		WorkFlow1.placeOrderClick();
+		CartPageObj.placeOrderClick();
 		Assert.assertTrue(WorkFlow2Obj.checkoutIsDisplayed());
 		
 	

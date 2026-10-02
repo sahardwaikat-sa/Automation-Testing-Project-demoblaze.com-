@@ -7,25 +7,27 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.Reporter;
+
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
+
 import org.testng.annotations.Test;
 
 import Base.BasePage;
-import Pages.loginPage1;
+import Pages.LoginPage;
 
 
-public class LoginTest1 extends BasePage {
 
-    loginPage1 loginObject;
+public class LoginTest extends BasePage {
+
+	LoginPage loginObject;
 	WebDriverWait wait;
 	
     @BeforeMethod
     public void setupObject() {
-    	loginObject = new loginPage1(driver);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    	loginObject = new LoginPage(driver);
+        wait        = new WebDriverWait(driver, Duration.ofSeconds(20));
         loginObject.clickLoginmain();
+       
         
     }
 

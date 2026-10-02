@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestPages.WorkFlow1Test">
+      <class name="TestPages.LoginTest">
         <methods>
-          <include name="setUpObject"/>
+          <include name="verifyLogin"/>
           <include name="goHome"/>
-          <include name="verifyCartPrice"/>
+          <include name="setupObject"/>
           <include name="setupDriver"/>
         </methods>
-      </class> <!-- TestPages.WorkFlow1Test -->
+      </class> <!-- TestPages.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
