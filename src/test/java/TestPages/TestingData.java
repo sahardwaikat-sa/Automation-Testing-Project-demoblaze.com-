@@ -9,12 +9,12 @@ public class TestingData {
 public Object[][] getdata3() {
 
 	return new Object[][] {
-		{"sahar", "Palestine","Nablus","9999","Sept","2026","Thank you for your purchase!" },
-		{"","" ,"","","","","Please fill out Name and Creditcard." },
-		{"","palestine" ,"nnnn","00000000000000000","Oct","26","Please fill out Name and Creditcard." },
-		{"ffff","palestine" ,"nnnn","","Oct","26","Please fill out Name and Creditcard." },
-		{"2333", "","","9999","","","Thank you for your purchase!" },
-		{"2333", "","",-2333,"","","Thank you for your purchase!" }
+		{"sahar", "Palestine","Nablus","9999","Sept","2026","Thank you for your purchase!",true },
+		{"","" ,"","","","","Please fill out Name and Creditcard.",false },
+		{"","palestine" ,"nnnn","00000000000000000","Oct","26","Please fill out Name and Creditcard.",false, },
+		{"ffff","palestine" ,"nnnn","","Oct","26","Please fill out Name and Creditcard." ,false},
+		{"2333", "","","9999","","","Thank you for your purchase!" ,true},
+		{"2333", "","","-2333","","","Thank you for your purchase!",true }
 		
 		
 
@@ -41,7 +41,7 @@ public Object[][] getLoginData() {
 public Object[][] getSignupData() {
     return new Object[][] {
             { "sahar", "1234", "false" },
-            { "sahar19829hhhhh", "pass123", "true" },
+            { "jjjjjjhjh99999999", "pass123", "true" },
            
     };
 }

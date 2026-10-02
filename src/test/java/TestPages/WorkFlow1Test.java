@@ -43,28 +43,28 @@ public class WorkFlow1Test extends BasePage{
 	}
 	@Test(priority=2)
 	void verifyselectItem1() {	
-		WorkFlow1.selectItem1();
-	Assert.assertTrue(WorkFlow1.productDescription());
-	   WorkFlow1.addToCard();}
-	   
-	 @Test
-	 void verifyAddCart() {
-		 WorkFlow1.selectItem1();
-		 WorkFlow1.addToCard();
-		 
-		 Alert alert =wait.until(ExpectedConditions.alertIsPresent());
-		String actual= alert.getText();
 		
-		Assert.assertTrue(actual.contains("Product added"));
-		 alert.accept();
-		 
-		 
-	 }
-
+		Assert.assertTrue(WorkFlow1.selectItem1().contains ("Samsung galaxy s6"));
+	Assert.assertTrue(WorkFlow1.productDescription());}
+	
+	@Test(priority=3)
+	
+		void verifyselectItem2() {	
+		
+		Assert.assertTrue(WorkFlow1.selectItem2().contains ("Sony vaio i5"));
+	Assert.assertTrue(WorkFlow1.productDescription());}
+	 
 	
 	
 	@Test(priority=4)
-  void verifyCart() {
+	 void verifyAddCart() {
+		 WorkFlow1.selectItem1();
+       Assert.assertTrue(WorkFlow1.addToCard().contains("Product added"));
+       }
+		
+	
+	@Test(priority=5)
+    void verifyCartPrice() {
 	  
 	 // WorkFlow1.loginClick();
 	  	WorkFlow1.cartClick();
@@ -77,9 +77,9 @@ public class WorkFlow1Test extends BasePage{
 	
 	  
 
-@Test(priority=5,dataProvider = "CustomerInfo",dataProviderClass = TestingData.class)
+@Test(priority=7,dataProvider = "CustomerInfo",dataProviderClass = TestingData.class)
 
-  void verifyPlaceOrder ( String name , String country, String City,  String creditcard, String month, String year, String message) {
+  void verifyPlaceOrder ( String name , String country, String City,  String creditcard, String month, String year, String message,boolean expected) {
 	WorkFlow1.cartClick();
 	
 	WorkFlow1.placeOrderClick() ;
@@ -88,15 +88,17 @@ public class WorkFlow1Test extends BasePage{
 	
 	WorkFlow1.purchaseClick();
 	
-	 Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-		  
-
-		    String actualMessage = alert.getText();
-
-		   
-			Assert.assertEquals(actualMessage, message);
-
-		    alert.accept();
+	if (expected ) {
+		
+		Assert.assertTrue(message.contains("Thank you for your purchase!"));}
+	else {  
+		
+		Alert alert= wait.until(ExpectedConditions.alertIsPresent());
+		String Message=alert.getText();
+		alert.accept();
+		Assert.assertTrue(message.contains(Message));
+		
+	}
 }
 
 

@@ -5,10 +5,9 @@
     <classes>
       <class name="TestPages.WorkFlow1Test">
         <methods>
-          <include name="verifyCart"/>
-          <include name="verifyPlaceOrder" invocation-numbers="0 1 2 3 4"/>
           <include name="setUpObject"/>
           <include name="goHome"/>
+          <include name="verifyCartPrice"/>
           <include name="setupDriver"/>
         </methods>
       </class> <!-- TestPages.WorkFlow1Test -->

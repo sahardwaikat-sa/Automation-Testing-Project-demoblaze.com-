@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import Base.BasePage;
 import Pages.WorkFlow1Page;
 import Pages.WorkFlow2;
@@ -68,9 +67,28 @@ void veryfiyLaptopCategoriesClick() {
 	Assert.assertTrue(WorkFlow2Obj.laptopIsDisplayed());
 	WorkFlow2Obj.nextClick();
 	WorkFlow2Obj.previousClick();
-	WorkFlow2Obj.contactClick();
+	
 }
-@Test (priority=4, dataProvider = "Contact",dataProviderClass = TestingData.class )
+@Test(priority=4)
+void verifyLaptopCategoriesNext()
+{
+	WorkFlow2Obj.laptopCategoriesClick();
+    WorkFlow2Obj.nextClick();
+    WorkFlow2Obj.asusIsDisplayed();
+
+	Assert.assertTrue(WorkFlow2Obj.asusIsDisplayed());
+	System.out.println("Laptop products are displayed and products from other categories are  displayed(ASUS).");}
+
+@Test(priority=5)
+  void verifyContactNavigation() {
+	WorkFlow2Obj.contactClick();
+	Assert.assertTrue(WorkFlow2Obj.contactNameIsDisplayed());
+	
+}
+
+
+
+@Test (priority=6, dataProvider = "Contact",dataProviderClass = TestingData.class )
 void verifyContactTemplat(String email, String name ,String message, String expected) {
 	
 	WorkFlow2Obj.contact(email, name, message);
@@ -82,7 +100,24 @@ void verifyContactTemplat(String email, String name ,String message, String expe
 	if(expected.equals(actual)) {
 		
 		Assert.assertTrue(actual.contains("Thanks for the message!!"));
+		
 	}
+	alert.accept();
+}
+	
+
+
+	@Test(priority=7)
+	void verifyEmptyCart () {
+		
+		WorkFlow1.cartClick();
+		Assert.assertEquals(WorkFlow2Obj.emptyCart(), 0);
+		System.out.println("the cart is Empty , no item selected");
+		WorkFlow1.placeOrderClick();
+		Assert.assertTrue(WorkFlow2Obj.checkoutIsDisplayed());
+		
+	
+	
 	
 }
 }

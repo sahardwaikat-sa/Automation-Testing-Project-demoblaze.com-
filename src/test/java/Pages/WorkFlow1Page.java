@@ -41,7 +41,7 @@ public class WorkFlow1Page {
 	By PreviousButton = By.xpath("//button[@id='prev2' and text()='Previous']");
 	//-------------Item page---------------------------------
 	By ProductDescription=By.xpath("//Strong[text()='Product description']");
-	By productName= By.xpath("//h2[@class='name']");
+	By productName = By.xpath("//h2[@class='name']");
 	By ProductPrice=By.xpath("//h3[text()='$790']");
 	By productImag=By.xpath("//img[@src='imgs/sony_vaio_5.jpg']");
 	By addCart  = By.xpath("//a[contains(text(),'Add to cart')]");
@@ -49,9 +49,10 @@ public class WorkFlow1Page {
 //---------------CART---------------------------
 	By PrductName=By.xpath("//table[@class='table table-bordered table-hover table-striped']//td[text()='Sony vaio i5']");
 	By TOTAL = By.xpath("//h2[text()='Total']");
-	By TPRICE= By.xpath("//h3[@id='totalp']");
+	By TotalPrice= By.xpath("//h3[@id='totalp']");
 	By PlaceOrderButton=By.xpath("//button[contains(@class,'btn-success')]");
-	By CART = By.xpath("//tbody[@id='tbodyid']/tr");
+	By CART = By.xpath("//tbody[@id='tbodyid']");
+	
 	
 	//--------------orderplace------------
 	By NAME= By.xpath("//div[@class='form-group']/input[@id='name']");
@@ -102,15 +103,26 @@ public void login2Click () {
 	 login2Click ();
   }
  //-------------Select Items---------------------------------------------------
-  public void selectItem1() {
+  public String selectItem1() {
 	  
-	  wait.until(ExpectedConditions.visibilityOfElementLocated(Item1)).click();
-	  
+	 WebElement item1 = wait.until(ExpectedConditions.visibilityOfElementLocated(Item1));
+		item1.click();
+		wait.until(ExpectedConditions.urlContains("prod.htm"));
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(productName)).getText();
+		
+		
   }
   
-public void selectItem2() {
+  
+
+	 
+  
+  
+public String selectItem2() {
 	  
 	  wait.until(ExpectedConditions.visibilityOfElementLocated(Item2)).click();
+	  wait.until(ExpectedConditions.urlContains("prod.htm"));
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(productName)).getText();
   }
 
 public int totalPrice() {
@@ -135,11 +147,14 @@ public void previousClick () {
 }
 	
 	
-public void addToCard() {
+public String addToCard() {
 	
 	wait.until(ExpectedConditions.visibilityOfElementLocated(addCart)).click();
 	 
-	wait.until(ExpectedConditions.alertIsPresent()).accept();
+		 Alert alert =wait.until(ExpectedConditions.alertIsPresent());
+		String actual= alert.getText();
+		alert.accept();
+		return actual;
 	
 }
 	
@@ -201,8 +216,8 @@ public void backHome() {
 }
 
 public int cartTotalPrice() {
-	 wait.until(ExpectedConditions.visibilityOfElementLocated(TPRICE));
-   	 return Integer.parseInt(driver.findElement(TPRICE).getText().trim());
+	 wait.until(ExpectedConditions.visibilityOfElementLocated(TotalPrice));
+   	 return Integer.parseInt(driver.findElement(TotalPrice).getText().trim());
 	
 	
 }
@@ -217,6 +232,8 @@ public String purcahseMessage() {
 	
 	return driver.findElement(checkouMessage).getText();
 }
+
+
 
 }
 

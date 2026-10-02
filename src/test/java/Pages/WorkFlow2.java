@@ -1,6 +1,7 @@
 package Pages;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -30,8 +31,8 @@ public class WorkFlow2 {
 	By WelecomUser = By.xpath("//a[@id='nameofuser']");
 	By LogOut = By.xpath("//a[@id='logout2']");
 	By Laptopcategories = By.xpath("//a[contains(@onclick,'notebook')]");
-	By laptop1 = By.xpath("//a[@href='prod.html?idp_=9'][1]");
 	By laptop2 = By.xpath("//a[@href='prod.html?idp_=11' and text()='MacBook air']");
+	By ASUSItem=By.xpath("//a[@href='prod.html?idp_=14']");
 	By NextButton= By.xpath("//button[@id='next2' ]");
 	By PreviousButton =By.xpath("//button[@id='prev2' ]");
 	By ContactButton = By .xpath("//a[@class='nav-link' and text()='Contact']");
@@ -39,6 +40,7 @@ public class WorkFlow2 {
 	By ContactName =By.xpath("//input[@id='recipient-name']");
 	By ContactMessage=By.xpath("//textarea[@id='message-text']");
 	By SendMessageButtn= By.xpath("//button[@onclick='send()']");
+	By NAME= By.xpath("//div[@class='form-group']/input[@id='name']");
 	By Item1  = By .xpath("//a[@class='hrefch' and @href='prod.html?idp_=1']");
 	By Item1Price=By.xpath("(//tbody[@id='tbodyid']/tr/td[3])[1]");
 	By Item2 = By.xpath("//a[@class ='hrefch' and @href='prod.html?idp_=8']");
@@ -50,7 +52,8 @@ public class WorkFlow2 {
 	By TOTAL = By.xpath("//h2[text()='Total']");
 	By TPRICE= By.xpath("//h3[@id='totalp']");
 	By PlaceOrderButton=By.xpath("//button[contains(@class,'btn-success')]");
-	By CART = By.xpath("//tbody[@id='tbodyid']/tr");
+	By CART = By.xpath("//tbody[@id='tbodyid']");
+	By CARTROWS = By.xpath("//tbody[@id='tbodyid']/tr");
 	
 
 	
@@ -96,6 +99,17 @@ public Boolean laptopIsDisplayed() {
 
 }
 
+public Boolean asusIsDisplayed() {
+	
+	Boolean result = wait.until(ExpectedConditions.visibilityOfElementLocated(ASUSItem)).isDisplayed();
+	return result;}
+
+public Boolean contactNameIsDisplayed() {
+	
+	Boolean result = wait.until(ExpectedConditions.visibilityOfElementLocated(ContactName)).isDisplayed();
+	return result;}
+
+
 public void nextClick() {
 	wait.until(ExpectedConditions.visibilityOfElementLocated(NextButton)).click();
 }
@@ -103,6 +117,8 @@ public void nextClick() {
 public void previousClick() {
 	wait.until(ExpectedConditions.visibilityOfElementLocated(PreviousButton)).click();
 }
+
+
 public void contact(String email, String name, String message) {
 	wait.until(ExpectedConditions.visibilityOfElementLocated(ContactButton)).click();
 	wait.until(ExpectedConditions.visibilityOfElementLocated(ContactEmail)).sendKeys(email);
@@ -122,5 +138,19 @@ public void contactClick() {
 		
 }
 
+public boolean checkoutIsDisplayed() {
+	
+return wait.until(ExpectedConditions.visibilityOfElementLocated(NAME)).isDisplayed();
+	
+	
+}
+
+public int emptyCart() {
+wait.until(ExpectedConditions.visibilityOfElementLocated(CART));
+List<WebElement>cartlist=driver.findElements(CARTROWS);
+	int size= cartlist.size();
+	return size;
+	
+}
 
 }
