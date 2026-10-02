@@ -185,14 +185,14 @@ target/surefire-reports/index.html
 - [x] TestNG execution report
 - [x] README file
 
-## 👤 Author
+## 👤 sahar
 
 <div align="center">
 
 **<sahar>**
 
-[![GitHub](https://img.shields.io/badge/GitHub-<your--username>-181717?style=for-the-badge&logo=github)](https://github.com/<your-username>)
-[![LinkedIn](www.linkedin.com/in/sahar-dwikat)
+
+www.linkedin.com/in/sahar-dwikat
 ⭐ *If you found this project useful, give it a star!* ⭐
 
 </div>
