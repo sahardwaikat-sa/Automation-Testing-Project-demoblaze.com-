@@ -1,4 +1,4 @@
-<div align="center">
+<div align="left">
 
 # 🛒 Demoblaze Automation Testing
 
@@ -189,11 +189,10 @@ target/surefire-reports/index.html
 
 <div align="center">
 
-**<Your Name>**
+**<sahar>**
 
 [![GitHub](https://img.shields.io/badge/GitHub-<your--username>-181717?style=for-the-badge&logo=github)](https://github.com/<your-username>)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-<your--name>-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/<your-profile>)
-
+[![LinkedIn](www.linkedin.com/in/sahar-dwikat)
 ⭐ *If you found this project useful, give it a star!* ⭐
 
 </div>
